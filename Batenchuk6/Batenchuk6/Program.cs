@@ -6,21 +6,18 @@ class Currency
     public string Name { get; set; }
     public double ExRate { get; set; }
 
-    // Конструктор за замовчуванням
     public Currency()
     {
         Name = "UAH";
         ExRate = 1.0;
     }
 
-    // Конструктор із параметрами
     public Currency(string name, double exRate)
     {
         Name = name;
         ExRate = exRate;
     }
 
-    // Конструктор копіювання
     public Currency(Currency other)
     {
         Name = other.Name;
@@ -42,7 +39,6 @@ class Product
     public string Producer { get; set; }
     public double Weight { get; set; }
 
-    // Конструктор за замовчуванням
     public Product()
     {
         Name = "Невідомо";
@@ -53,7 +49,6 @@ class Product
         Weight = 0.0;
     }
 
-    // Конструктор із параметрами
     public Product(string name, double price, Currency cost, int quantity, string producer, double weight)
     {
         Name = name;
@@ -64,7 +59,6 @@ class Product
         Weight = weight;
     }
 
-    // Конструктор копіювання
     public Product(Product other)
     {
         Name = other.Name;
@@ -146,7 +140,7 @@ class Program
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-        Product[] products = null; // Ініціалізація змінної products
+        Product[] products = null;
 
         while (true)
         {
